@@ -1,5 +1,18 @@
 {
   "pages": [
     "pages/index/index"
-  ]
+  ],
+  "requireBackgroundModes": ["audio","location"],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true,
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "前端之家"
+  },
+  "networkTimeout": {
+    "downloadFile": 100000,
+    "uploadFile": 100000
+  },
+  "debug": true
+
 }
