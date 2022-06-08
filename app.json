@@ -9,8 +9,10 @@
   "window": {
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": true,
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "前端之家"
+    "navigationBarTitleText": "前端之家",
+    "backgroundColor":"#6A5F56",
+    "navigationBarBackgroundColor":"#6A5F56",
+    "navigationBarTextStyle":"white"
   },
   "networkTimeout": {
     "downloadFile": 100000,
