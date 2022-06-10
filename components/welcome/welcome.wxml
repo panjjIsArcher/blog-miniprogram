@@ -1,1 +1,1 @@
-<canvas id="canvas" canvas-id="canvas" class="canvas" width="100%" height="100%"/>
+<canvas id="{{canvasId}}" canvas-id="{{canvasId}}" class="canvas" width="100%" height="100%"/>
