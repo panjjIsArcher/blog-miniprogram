@@ -10,14 +10,13 @@ Component({
       ready(){    
         const canvasId = this.data.canvasId;
         const query =  wx.createSelectorQuery().in(this)
-        const node = query.select(`#${this.data.canvasId}`).node();
-        console.log(node)
+        const node = query.select(`.${this.data.canvasId}`).node();
         node.in(this).exec(res=>{
-          console.log(res)
           const canvas = THREE.global.registerCanvas(res[0].node)
+          // 初始化webgl
           init( canvasId , canvas   )
         })
-    
+        
       }
     }
 })

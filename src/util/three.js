@@ -14,10 +14,10 @@ export const init = function(canvasId = "canvas",canvasElement){
     camera.position.z = 0.1;
     camera.position.y = 0;
     // 开始渲染
-    render(canvasElement,scene,camera,renderer)
+    render(canvasElement,scene,camera,renderer);
 }
 
 export const render = function(canvas,scene,camera,renderer){
     canvas.requestAnimationFrame(render)
-    renderer(scene,camera)
+    renderer.render(scene, camera)
 }
