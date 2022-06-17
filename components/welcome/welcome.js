@@ -1,4 +1,4 @@
-import { init, addObject, textAdd } from "../../src/util/three";
+import { init, addObject,test, textAdd } from "../../src/util/three";
 import * as THREE from "../../libs/three.weapp.min";
 import { global } from "../../libs/three.weapp";
 Component({
@@ -14,11 +14,11 @@ Component({
         const canvas = THREE.global.registerCanvas(res[0].node);
         // 初始化webgl
         init(canvasId, canvas);
-        // const cube = test()
+        const cube = test()
         // 新增数字雨
          await textAdd("hello world");
         // console.log(textGeo);
-        // addObject(textGeo);
+        addObject(cube);
       });
     },
   },

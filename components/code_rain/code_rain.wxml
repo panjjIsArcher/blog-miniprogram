@@ -1,0 +1,3 @@
+<view class="code-rain">
+  <text class="rainy" wx:for="{{text}}" wx:key="item" style="animation-delay:{{deleyList[index]}};">{{item}}</text>
+</view>

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "welcome":"../../components/welcome/welcome"
+    "codeRain": "../../components/code_rain/code_rain",
+    "welcome": "../../components/welcome/welcome"
   }
 }

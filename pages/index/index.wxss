@@ -1,1 +1,8 @@
-/* pages/index/index.wxss */
+.index{
+    background-color: #000;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
