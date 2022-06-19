@@ -7,6 +7,7 @@ Page({
   data: {
     showCanvas: false,
     showCodeRain: true,
+    showPill:false,
     codeList: [],
   },
   async text() {
@@ -33,7 +34,8 @@ Page({
     setTimeout(() => {
       this.setData({
         showCodeRain: false,
-        showCanvas: true,
+        showCanvas: false,
+        showPill:true
       });
     }, durationTime.rainy);
   },
