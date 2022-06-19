@@ -7,8 +7,6 @@ let canvasSecne, canvasGlabolElement, canvasCamera, canvasRender, globalWebGl;
 let testGeo;
 
 const textloader = new THREE.FontLoader();
-// 小程序没有 requestAnimationFrame
-// 需要自己实现一个
 console.log(THREE.FontLoader);
 
 export const init = function (canvasId = "canvas", canvasElement) {
@@ -69,7 +67,7 @@ export const orbiControl = function () {
 // 测试字体
 export const textAdd = async function (
   text = "hello pjj",
-  param = { size: 18 }
+  param = { size: 2 }
 ) {
   textloader.load(
     "https://threejs.org/examples/fonts/optimer_bold.typeface.json",
@@ -77,7 +75,7 @@ export const textAdd = async function (
       const textGeo = new THREE.TextGeometry(text, { ...param, font: res });
       textGeo.computeBoundingBox();
       const textMesh1 = new THREE.Mesh(textGeo, [
-        new THREE.MeshPhongMaterial({ color: 0xffffff, flatShading: true }), // front
+        new THREE.MeshPhongMaterial({ color: 0x0000a0, flatShading: true }), // front
         new THREE.MeshPhongMaterial({ color: 0xffffff }), // side
       ]);
       addObject(textMesh1);
