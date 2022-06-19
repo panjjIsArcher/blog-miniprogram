@@ -1,13 +1,13 @@
 import * as THREE from "../../libs/three.weapp.min";
 import { OrbitControls } from "../../jsm/controls/OrbitControls";
+import { Mesh } from "../../libs/three.weapp";
 
 const screenWidth = wx.getSystemInfoSync().screenWidth;
 const screenHeight = wx.getSystemInfoSync().screenHeight;
 let canvasSecne, canvasGlabolElement, canvasCamera, canvasRender, globalWebGl;
 let testGeo;
 
-const textloader = new THREE.FontLoader();
-console.log(THREE.FontLoader);
+const fontloader = new THREE.FontLoader();
 
 export const init = function (canvasId = "canvas", canvasElement) {
   const camera = new THREE.PerspectiveCamera(
@@ -28,6 +28,8 @@ export const init = function (canvasId = "canvas", canvasElement) {
   camera.position.x = 0;
   camera.position.y = 0;
   camera.position.z = 1;
+  // 设置renderer
+  renderer.setSize(screenWidth, screenHeight);
 
   //赋值到全局变量
   canvasSecne = scene;
@@ -54,7 +56,6 @@ export const render = (
 };
 // 新增物体
 export const addObject = function (object) {
-  console.log(globalWebGl);
   if (globalWebGl) {
     globalWebGl.scene.add(object);
   }
@@ -64,22 +65,38 @@ export const orbiControl = function () {
   const orbit = new OrbitControls(canvasCamera, canvasGlabolElement);
   orbit.update();
 };
-// 测试字体
+// 字体
 export const textAdd = async function (
   text = "hello pjj",
-  param = { size: 2 }
+  param = { size: 100, height: 100 }
 ) {
-  textloader.load(
+  let font;
+  await fontloader.load(
     "https://threejs.org/examples/fonts/optimer_bold.typeface.json",
-    async (res) => {
-      const textGeo = new THREE.TextGeometry(text, { ...param, font: res });
-      textGeo.computeBoundingBox();
-      const textMesh1 = new THREE.Mesh(textGeo, [
-        new THREE.MeshPhongMaterial({ color: 0x0000a0, flatShading: true }), // front
-        new THREE.MeshPhongMaterial({ color: 0xffffff }), // side
-      ]);
-      addObject(textMesh1);
-      return textMesh1;
+    (value) => {
+      font = value;
+      const textGeo = new THREE.TextGeometry(text, {
+        font: font,
+        size: 0.15,
+        height: 0.1,
+      });
+      const mesh = new Mesh(
+        textGeo,
+        new THREE.MeshBasicMaterial({ color: 0xffffff })
+      );
+      canvasSecne.add(mesh);
+      mesh.position.set(0.1, 0.1, -2);
+      const scale = 0.5;
+      mesh.scale.x = scale;
+      mesh.scale.y = scale;
+      mesh.scale.z = scale;
+      const obj = {
+        x: mesh.position.x,
+        y: mesh.position.y,
+        z: mesh.position.z,
+      };
+
+      return mesh;
     }
   );
 };
@@ -91,6 +108,7 @@ export const test = function () {
     side: THREE.DoubleSide,
   });
   const cube = new THREE.Mesh(geo, metarial);
+  cube.position.set(-0.1, 1, -3);
   testGeo = cube;
   return cube;
 };

@@ -1,0 +1,49 @@
+.code-rain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+}
+.code-rain>text{
+  width: 16px;
+  height: 100%;
+  display: inline-block;
+
+  word-break: break-all;
+  text-align: center;
+  font-size: 16px;
+  line-height:22px;
+  color: lightgreen;
+  height: calc(14 * 2 * 22px);
+  font-family: -webkit-body;
+  text-orientation: upright;
+  letter-spacing:2px;
+  top: -616px;
+  position: relative;
+  background-image: -webkit-linear-gradient(bottom, #000, green, #000); 
+ -webkit-background-clip: text; 
+ -webkit-text-fill-color: transparent; 
+
+}
+.rainy{
+  animation-name: codeRainy;
+  animation-duration: 3s;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+ 
+}
+@keyframes codeRainy {
+  0% {
+    top:-616px;
+  }
+  100%{
+    top: 100%;
+  }
+  
+}

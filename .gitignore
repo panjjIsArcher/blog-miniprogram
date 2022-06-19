@@ -1,5 +1,6 @@
 # dir 不需要提交的文件目录
 /node_modules
+/miniprogram_npm
 
 # 不需要提交的文件
 

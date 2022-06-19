@@ -1,3 +1,4 @@
-<view>
-    <welcome/>
+<view class="index">
+    <codeRain wx:if="{{showCodeRain}}" text="{{codeList}}"/>
+    <welcome  wx:if="{{showCanvas}}"/>
 </view>
