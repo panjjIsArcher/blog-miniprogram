@@ -1,5 +1,5 @@
 <view class="pill">
-  <text class="text-common">在「母体」中，你所见的皆非真实</text>
-  <text class="text-common"> 选择蓝色药丸，你将在明早从床上醒来，继续你的生活 </text>
-  <text class="text-common">选择红色药丸，我将带你去看世界的真相</text>
+  <text class="text-common text-shader {{index === 0?'text-animation':''}}">在「母体」中，你所见的皆非真实</text>
+  <text class="text-common text-shader  {{index === 1?'text-animation':''}}">选择蓝色药丸，你明早将照例从床上醒来 </text>
+  <text class="text-common text-shader  {{index === 2?'text-animation':''}}">选择红色药丸，我将带你去看世界的真相</text>
 </view>

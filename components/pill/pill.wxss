@@ -11,10 +11,46 @@
 }
 .text-common{
   width: 100%;
+  font-family: monospace;
   line-height: 10vw;
+  height: 10vw;
   margin-bottom: 10vw;
   display: block;
   background-image: -webkit-linear-gradient(left, rgb(1,59, 1), rgb(1, 59, 1),rgba(255,255,255,0.1));  
  -webkit-background-clip: text; 
  -webkit-text-fill-color: transparent; 
+}
+.text-shader::before{
+  content: "";
+  height: 4vw;
+  width: 10px;
+  background-color: rgb(1, 59, 1);
+  display: inline-block;
+  margin-right: 7px;
+}
+.text-animation{
+  animation-name: input;
+  animation-duration: 8000ms;
+  overflow: hidden;
+}
+.text-animation::before{
+  animation-name: shader;
+  animation-iteration-count: infinite;
+  animation-duration: 600ms;
+}
+@keyframes input {
+  0%{
+    width: 1ch;
+  }
+  100%{
+    width: 100%;
+  }
+}
+@keyframes shader {
+  0% {
+    background-color: #000;
+  }
+  100%{
+    background-color: rgb(1, 59, 1);
+  }
 }
