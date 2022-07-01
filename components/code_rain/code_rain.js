@@ -1,3 +1,5 @@
+const { durationTime } = require("../../src/constants/config");
+
 // components/code_rain/code_rain.js
 Component({
   /**
@@ -30,10 +32,22 @@ Component({
       });
       this.setData({ deleyList: timeList });
     },
+    // 组件完成动画
+    finish(){
+      setTimeout (() => {
+        this.triggerEvent("animationEnd",true)
+      }, durationTime.rainy )
+    }
   },
   observers: {
     text(text) {
       this.randomDelay(text);
     },
   },
+  lifetimes:{
+    attached(){
+      this.finish()
+   
+    }
+  }
 });

@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/game/game",
     "pages/index/index"
+   
   ],
   "requireBackgroundModes": [
     "audio",
@@ -10,9 +12,9 @@
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": true,
     "navigationBarTitleText": "前端之家",
-    "backgroundColor":"#6A5F56",
-    "navigationBarBackgroundColor":"#6A5F56",
-    "navigationBarTextStyle":"white"
+    "backgroundColor": "#6A5F56",
+    "navigationBarBackgroundColor": "#6A5F56",
+    "navigationBarTextStyle": "white"
   },
   "networkTimeout": {
     "downloadFile": 100000,

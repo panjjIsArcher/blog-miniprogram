@@ -1,5 +1,5 @@
 // pages/index/index.js
-import { durationTime } from "../../src/constants/config";
+import { durationTime, pages } from "../../src/constants/config";
 Page({
   /**
    * Page initial data
@@ -27,6 +27,13 @@ Page({
       codeList.push(str);
     }
     this.setData({ codeList });
+  },
+  animationEnd(e){
+    if(e.detail){
+      wx.navigateTo({
+        url: pages.game,
+      })
+    }
   },
   onLoad() {
     // 生成文字

@@ -26,5 +26,7 @@
     "gulp-tap": "^2.0.0",
     "lil-gui": "^0.16.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "phaser": "^3.55.2"
+  }
 }

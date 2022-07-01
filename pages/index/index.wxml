@@ -1,6 +1,6 @@
 <view class="index">
-    <codeRain wx:if="{{showCodeRain}}" text="{{codeList}}"/>
+    <codeRain wx:if="{{showCodeRain}}" text="{{codeList}}" bind:animationEnd="animationEnd"/>
     <!-- <pill wx:if="{{showPill}}" /> -->
-    <pill  />
+    <!-- <pill  /> -->
     <!-- <welcome  wx:if="{{showCanvas}}"/> -->
 </view>
