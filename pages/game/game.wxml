@@ -1,3 +1,3 @@
 <view class="game-container">
-    <canvas type="2d" canvas-id="pixi"></canvas>
+    <canvas type="2d" id="pixi" canvas-id="pixi"></canvas>
 </view>
