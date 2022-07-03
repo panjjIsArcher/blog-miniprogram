@@ -1,6 +1,5 @@
 
-import * as Phaser from "../../miniprogram_npm/phaser/index";
-// const Phaser = require('phaser');
+
 const screen = wx.getSystemInfoSync();
 console.log(screen)
 Page({
