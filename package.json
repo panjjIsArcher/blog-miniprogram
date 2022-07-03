@@ -25,9 +25,5 @@
     "gulp-sass": "^5.1.0",
     "gulp-tap": "^2.0.0",
     "lil-gui": "^0.16.1"
-  },
-  "dependencies": {
-    "pixi": "^0.3.1",
-    "pixi.js": "^6.4.2"
   }
 }

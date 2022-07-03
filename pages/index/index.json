@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "codeRain": "../../components/code_rain/code_rain",
-    "welcome": "../../components/welcome/welcome",
+   
     "pill":"../../components/pill/pill"
   }
 }
